@@ -25,6 +25,7 @@ h1
   float: left;
   position: relative;
   margin:4%;
+  border:red 1px solid;
 }
 
 .inventors{
@@ -50,7 +51,8 @@ h1
   border:solid 2px #000;
   position: absolute;
   top:95%;
-  left:8%;
+  left:8%;;
+
 }
 
 .date{
