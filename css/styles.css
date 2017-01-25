@@ -1,0 +1,63 @@
+
+
+.background-img{
+background: url(images/shadowbkgnd.png)  center center no-repeat fixed;
+background-size: cover;
+background-color: #fdfdfd;
+/* give the background a color while the img loads */
+}
+
+h1
+{
+  color:#f79206;
+  text-align: center;
+  font-size: 50px;
+  margin: auto;
+  padding-top:30px;
+}
+
+.subheading{
+  text-align: center;
+  margin: auto;
+}
+
+.item-content{
+  float: left;
+  position: relative;
+  margin:4%;
+}
+
+.inventors{
+  width:200px;
+  float:left;
+  height:auto;
+  }
+
+.inventions{
+  width:100px;
+  height:auto;
+  position: absolute;
+  top:30%;
+  left:20%;
+}
+
+.circles{
+  width:150px;
+  height:150px;
+  background-color:#327096;
+  opacity: 0.9;
+  border-radius: 50%;
+  border:solid 2px #000;
+  position: absolute;
+  top:95%;
+  left:8%;
+}
+
+.date{
+  position: absolute;
+  top:58%;
+  left:50%;
+  color:#fdae43;
+  font-size: 20px;
+  font-weight: bold;
+}
