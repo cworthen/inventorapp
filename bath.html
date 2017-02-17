@@ -10,10 +10,11 @@
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
 
-
-<body class="inventor-img">
-  <div class="wrapper">
-
+  <body class="inventor-img">
+<div class="wrapper">
+  <div class="back-btn">
+  <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+</div>
 <div class="inventor-info">
 
     <div class="info-date">
@@ -40,6 +41,24 @@
 <!--closes wrapper-->
 </div>
 
+<script>
+// select the go back icon
+var backbtn = document.querySelector('.back-btn');
 
+//add click event to icon
+backbtn.addEventListener('click', function(){
+
+//change background img
+  var bg = document.querySelector('.background-img');
+  bg.style.backgroundImage="url(css/images/shadowbkgnd.png)";
+
+//load home page
+  $("body").load("http://localhost:8888/inventorapp/");
+}, false);
+
+</script>
+
+<!--js files -->
+<script src="https://use.fontawesome.com/f7852a5237.js"></script>
   </body>
 </html>

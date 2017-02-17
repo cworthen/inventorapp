@@ -1,6 +1,13 @@
 
 /*** main page ***/
 
+.back-btn i{
+  color:white;
+  font-size: 3.5em;
+  margin-top: 30px;
+
+
+}
 .background-img{
 background: url(images/shadowbkgnd.png) center center no-repeat fixed;
 background-size: cover;
@@ -77,6 +84,7 @@ h1
 }
 
 /*** inventor page ****/
+
 
 .inventor-info{
   position: absolute;

@@ -3,6 +3,7 @@
 <!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
 <!--[if IE 8]><html class="preIE9"><![endif]-->
 <!--[if gte IE 9]><!--><html><!--<![endif]-->
+
   <head>
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,14 +11,13 @@
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
 
-  <body class="background-img">
-
+<body class="background-img">
 <div class="wrapper">
 <h1>Inventor App</h1>
 <p class="subheading">please select to continue</p>
 
 <div class="inventory-slide">
-<img class="inventors" src="css/images/patriciabath.png">
+<!--a href="bath.html"--><img class="inventors" src="css/images/patriciabath.png"></a>
 <div class="circles">
 <img class="inventions" src="css/images/watergun.png">
 <p class="date">1994</p>
@@ -50,7 +50,42 @@
 </div>
 </div>
 
+<script>
 
+/*** when user clicks on inventor - show inventor page
+hide home screen **/
+
+// selecting inventor images
+   var bath = document.querySelectorAll('.inventors');
+   console.log(bath);
+
+// loop through all images
+   for (var i=0; i < bath.length; i++){
+
+// add click event to move to inventor page
+  bath[i].addEventListener('click', function(){
+
+// manually change background img b/c load function won't change img
+   var bg = document.querySelector('.background-img');
+   bg.style.backgroundImage="url(css/images/bath.jpg)";
+
+// load inventor page without leaving index.html
+    $("body").load("http://localhost:8888/inventorapp/bath.html");
+  }, false);
+}
+</script>
+
+<!--js files -->
+<script src="https://use.fontawesome.com/f7852a5237.js"></script>
+
+ <script
+   src="https://code.jquery.com/jquery-3.1.1.min.js"
+   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+   crossorigin="anonymous">
+
+   header('content-type: application/json; charset=utf-8');
+   header("access-control-allow-origin: *");
+   </script>
 
   </body>
 </html>
