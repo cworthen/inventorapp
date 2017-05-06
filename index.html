@@ -5,87 +5,311 @@
 <!--[if gte IE 9]><!--><html><!--<![endif]-->
 
   <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Inventor app</title>
-  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <title>Inventor app</title>
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://use.fontawesome.com/f7852a5237.js"></script>
+  <script src="js/handlebars-v4.0.5.js"></script>
+  <script src="slick/slick.min.js"></script>
   </head>
 
-<body class="background-img">
+
+<body>
+
+
 <div class="wrapper">
+
+  <!--sources pop-up icon -->
+    <i class="fa fa-link" id="sources" aria-hidden="true"></i>
+  <!--home icon --->
+    <div class="home-icon">
+    <i class="fa fa-home" aria-hidden="true"></i>
+  </div>
+  <!--info icon -->
+  <i class="fa fa-info-circle" id="info" aria-hidden="true"></i>
+
+<!--welocome screen -->
+  <div class="modal">
+    <div class="modal-content">
+       <span class="close">&times;</span>
+       <h2>Welcome Screen</h2>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Suspendisse accumsan laoreet tristique. Fusce id urna blandit,
+          vehicula leo vitae, malesuada sem. Fusce molestie molestie fermentum.
+          Donec sit amet nisl ac lacus pretium finibus vitae quis risus.
+          Fusce posuere nunc sit amet lobortis hendrerit. Donec blandit
+          dui imperdiet, semper massa et, finibus quam. Integer tempor orci id
+          lorem vehicula, in laoreet eros auctor. Curabitur felis arcu, gravida
+          a purus eu, efficitur dictum mauris. Phasellus sit amet fringilla
+           nunc. Nulla facilisi. Duis pharetra sapien et mauris maximus, at
+          mollis dolor hendrerit.</p>
+     </div>
+  </div>
+
+<!--resource pop and home button-->
+
+
+
+<div class="overlay">
+<div id = "modalSources">
+    <i class="fa fa-times" id="close" aria-hidden="true"></i>
+<div class="modal-content-sources">
+  <ul>
+  <h2>Sources:</h2>
+  <h3>Patricia Bath</h3>
+
+  <li><a href="http://www.blackpast.org/aah/bath-patricia-1942">Blackpast</a></li>
+  <li><a href="https://cfmedicine.nlm.nih.gov/physicians/biography_26.html">Changing the Fate of Medicine</a></li>
+  <li><a href="http://www.thehistorymakers.com/biography/dr-patricia-bath">The History Makers</a></li>
+
+  <h3>Flossie Wong</h3>
+
+  <li><a href="https://alumni.ucla.edu/stories/flossie-wong-staal-68-ph-d-72/">UCLA Alumnni</a></li>
+  <li><a href="https://history.nih.gov/nihinownwords/docs/transcripts/wongstaal.html">Offcie of NIH History</a></li>
+  <li><a href="http://www.bookrags.com/biography/flossie-wong-staal-wmi/#gsc.tab=0">Book Rags</a></li>
+  <li><a href="http://www.biography-center.com/biographies/10406-wong_staal_flossie.html">Biography Center</a></li>
+
+
+  <h3>Ellen Ochoa</h3>
+
+  <li><a href="https://www.nasa.gov/centers/johnson/about/people/orgs/bios/ochoa.html">NASA</a></li>
+  <li><a href="http://americacomesalive.com/2014/09/24/ellen-ochoa-first-latina-astronaut-inventor-now-director-mission-control/">America Comes Alive</a></li>
+  <li><a href="http://www.biography.com/people/ellen-ochoa-10413023">Biography</a></li>
+  <li><a href="https://www.jsc.nasa.gov/Bios/htmlbios/ochoa.pdf">Johnson Space Center</a></li>
+  </ul>
+
+
+
+</div>
+</div>
+</div>
+
+
+<!--home button -->
+
+
+
+<!---home screen -->
+
+  <div class="home-screen">
 <h1>Inventor App</h1>
-<p class="subheading">please select to continue</p>
-
-<div class="inventory-slide">
-<!--a href="bath.html"--><img class="inventors" src="css/images/patriciabath.png"></a>
-<div class="circles">
-<img class="inventions" src="css/images/watergun.png">
-<p class="date">1994</p>
+<h3>please select to continue</h3>
+<ul class="inventory-slide"></ul>
+<footer>
+  <p>Suggestions or Comments? Contact <a href="mailto:inventapp@gmail.com?Subject=Hello" target="_blank">inventorapp@gmail.com</a>&nbsp;&#42;&nbsp;Created by
+  <a href="candaceworthen.com">Candace Worthen</a>
+  <a href="https://github.com/cworthen"><i class="fa fa-github" aria-hidden="true"></i></a>
+</p>
+</footer>
 </div>
 </div>
 
-<div class="inventory-slide">
-<img class="inventors" src="css/images/patriciabath.png">
-<div class="circles">
-<img class="inventions" src="css/images/watergun.png">
-<p class="date">1994</p>
+<div class="inventor-screen"></div>
+
+<div class="container">
 </div>
-</div>
+<!--closes wrapper -->
 
 
-<div class="inventory-slide">
-<img class="inventors" src="css/images/patriciabath.png">
-<div class="circles">
-<img class="inventions" src="css/images/watergun.png">
-<p class="date">1994</p>
-</div>
-</div>
-
-<div class="inventory-slide">
-<img class="inventors" src="css/images/patriciabath.png">
-<div class="circles">
-  <p class="date">1994</p>
-<img class="inventions" src="css/images/watergun.png">
-</div>
-</div>
-</div>
 
 <script>
+$(document).ready(function(){
 
-/*** when user clicks on inventor - show inventor page
-hide home screen **/
+function init() {
 
-// selecting inventor images
-   var bath = document.querySelectorAll('.inventors');
-   console.log(bath);
 
-// loop through all images
-   for (var i=0; i < bath.length; i++){
+/*  var jsonData = [
+    {
+    "name": "Patricia Bath",
+    "photo": "css/images/bath.jpg",
+    "bio":["Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi dictum mi erat, et dictum metus dictum sed",
+           "Nam vitae congue diam. Nam sodales luctus quam, sed pellentesque nibh pulvinar non. Nunc nec rhoncus tortor.",
+           "Suspendisse potenti. Sed quis molestie dui. Aenean non faucibus sapien. Maecenas ex metus, tincidunt sed risus",
+            "elementum, elementum varius orci. Sed tempor nunc id sem feugiat ultricies. Nam posuere ligula",
+           "vitae libero facilisis convallis. Nulla facilisi."
+         ],
 
-// add click event to move to inventor page
-  bath[i].addEventListener('click', function(){
+    "date": "1981",
+    "invention-photo": "css/images/laserphaco.jpg"
+  },
 
-// manually change background img b/c load function won't change img
-   var bg = document.querySelector('.background-img');
-   bg.style.backgroundImage="url(css/images/bath.jpg)";
+  {
+  "name": "Flossie Wong",
+  "photo": "css/images/flossiewong.jpg",
+  "bio":["Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi dictum mi erat, et dictum metus dictum sed",
+         "Nam vitae congue diam. Nam sodales luctus quam, sed pellentesque nibh pulvinar non. Nunc nec rhoncus tortor.",
+         "Suspendisse potenti. Sed quis molestie dui. Aenean non faucibus sapien. Maecenas ex metus, tincidunt sed risus",
+          "elementum, elementum varius orci. Sed tempor nunc id sem feugiat ultricies. Nam posuere ligula",
+         "vitae libero facilisis convallis. Nulla facilisi."
+       ],
 
-// load inventor page without leaving index.html
-    $("body").load("http://candaceworthen.com/inventorapp/bath.html");
-  }, false);
+  "date": "1983",
+  "invention-photo": "css/images/HIVvirus.png"
+  },
+
+  {
+  "name": "Garrett Morgan",
+  "photo": "css/images/garrettmorgan.jpg",
+  "bio":["Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi dictum mi erat, et dictum metus dictum sed",
+         "Nam vitae congue diam. Nam sodales luctus quam, sed pellentesque nibh pulvinar non. Nunc nec rhoncus tortor.",
+         "Suspendisse potenti. Sed quis molestie dui. Aenean non faucibus sapien. Maecenas ex metus, tincidunt sed risus",
+          "elementum, elementum varius orci. Sed tempor nunc id sem feugiat ultricies. Nam posuere ligula",
+         "vitae libero facilisis convallis. Nulla facilisi."
+       ],
+
+  "date": "1923",
+  "invention-photo": "css/images/trafficlight.png"
+  },
+
+  {
+  "name": "Ellen Ochoa",
+  "photo": "css/images/ellenochoa.jpg",
+  "bio":["Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi dictum mi erat, et dictum metus dictum sed",
+         "Nam vitae congue diam. Nam sodales luctus quam, sed pellentesque nibh pulvinar non. Nunc nec rhoncus tortor.",
+         "Suspendisse potenti. Sed quis molestie dui. Aenean non faucibus sapien. Maecenas ex metus, tincidunt sed risus",
+          "elementum, elementum varius orci. Sed tempor nunc id sem feugiat ultricies. Nam posuere ligula",
+         "vitae libero facilisis convallis. Nulla facilisi."
+       ],
+
+  "date": "1993",
+  "invention-photo": "css/images/astronaut.png"
+  },
+
+  {
+  "name": "Ajay Bhatt",
+  "photo": "css/images/bhatt.jpg",
+  "bio":["Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi dictum mi erat, et dictum metus dictum sed",
+         "Nam vitae congue diam. Nam sodales luctus quam, sed pellentesque nibh pulvinar non. Nunc nec rhoncus tortor.",
+         "Suspendisse potenti. Sed quis molestie dui. Aenean non faucibus sapien. Maecenas ex metus, tincidunt sed risus",
+          "elementum, elementum varius orci. Sed tempor nunc id sem feugiat ultricies. Nam posuere ligula",
+         "vitae libero facilisis convallis. Nulla facilisi."
+       ],
+
+  "date": "1994",
+  "invention-photo": "css/images/usb.png"
+  },
+
+  {
+  "name": "An Wang",
+  "photo": "css/images/anwang.jpg",
+  "bio":["Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi dictum mi erat, et dictum metus dictum sed",
+         "Nam vitae congue diam. Nam sodales luctus quam, sed pellentesque nibh pulvinar non. Nunc nec rhoncus tortor.",
+         "Suspendisse potenti. Sed quis molestie dui. Aenean non faucibus sapien. Maecenas ex metus, tincidunt sed risus",
+          "elementum, elementum varius orci. Sed tempor nunc id sem feugiat ultricies. Nam posuere ligula",
+         "vitae libero facilisis convallis. Nulla facilisi."
+       ],
+
+  "date": "1994",
+  "invention-photo": "css/images/wang220.png"
+  }
+
+]*/
+
+
+  var source = $("#inventorRowTemplate").html();
+  var template = Handlebars.compile(source);
+  var inventorScreen = document.querySelector('.inventor-screen');
+  $(".inventory-slide").html(template({objects:jsonData}) );
+
+
+
+
+  $('.squares').click(function(){
+            var index = $(this).data('index');
+            var source = $("#inventorTemplate").html();
+            var template = Handlebars.compile(source);
+            $(".inventor-screen").html(template(jsonData[index]));
+            //$('.inventor-screen').css('background-image', 'url(' + jsonData[index].inventor_image + ')');
+            $('.inventor-screen').css('z-index', '10000');
+
+            $('.home-screen').addClass('animated fadeOut');
+            $('#info').css('color', 'white');
+          });
+
+
+
+  $('ul.inventory-slide').slick({
+    infinite: false,
+    slidesToScroll: 3,
+    slidesToShow: 3,
+    arrows:true,
+    dots:true,
+
+    responsive: [
+   {
+     breakpoint: 768,
+     settings: {
+       slidesToShow: 3,
+       slidesToScroll: 3,
+       arrows: true,
+       dots: true
+     }
+   }
+   ]
+  });
 }
+
+
+  var jsonData;
+
+$.ajax({
+               dataType: 'json',
+               //url: "http://localhost:8888/inventorCrud/getinventors.php",
+               url: "http://localhost:8888/inventorCrud/getinventors.php",
+               data:{jsonData: jsonData},
+               error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert(errorThrown);
+              },
+               success: function(data){
+               jsonData = data;
+               init();
+             }
+
+           });
+
+          });
+
+
+
 </script>
 
+
+<script id="inventorRowTemplate" type="text/x-handlebars-template">
+  {{#each objects}}
+  <li>
+  <!--img class=inventors src="css/images/patriciabath.png"-->
+  <div class="outer-square">
+<div class="squares" data-index="{{@index}}">
+  <img class="inventions" src="{{invention_image}}">
+    <div class="circle">
+  <p class="date">{{year}}</p>
+</div>
+  </div>
+</div>
+  </li>
+  {{/each}}
+</script>
+
+<script id="inventorTemplate" type="text/x-handlebars-template">
+  <div class="inventor-screen">
+        <img class="inventor-screen" src="{{inventor_image}}">
+  <div class="inventor-info">
+      <div class="info-date">
+        <p>{{year}}</p>
+      </div>
+      <div class="info-header"><p>{{firstname}} {{lastname}}</p></div>
+    <p>{{bio}}</p>
+  </div>
+</div>
+</script>
+
+  <script src="js/main.js"></script>
 <!--js files -->
-<script src="https://use.fontawesome.com/f7852a5237.js"></script>
-
- <script
-   src="https://code.jquery.com/jquery-3.1.1.min.js"
-   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-   crossorigin="anonymous">
-
-   header('content-type: application/json; charset=utf-8');
-   header("access-control-allow-origin: *");
-   </script>
-
   </body>
 </html>
