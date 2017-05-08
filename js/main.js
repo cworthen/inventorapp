@@ -3,13 +3,13 @@ $(document).ready(function(){
 
   $('.home-icon').click(function(){
 
-		if(!$(this).hasClass('faded')) {
-			location.reload();
-		}
+    if(!$(this).hasClass('faded')) {
+      location.reload();
+    }
 
-    });
+  });
 
-    });
+});
 
 //welcome screen pop-up
 
@@ -22,17 +22,19 @@ info.addEventListener("click", function(){
 //close out welcome screen
 var modal = document.querySelector('.modal');
 var span = document.querySelector('.close');
-  span.addEventListener("click", function(){
+span.addEventListener("click", function(){
   modal.style.display="none";
-  });
+});
 
 
-  if(localStorage.getItem("modal")){
+//To have the welcome automatically show once to new users
+
+if(localStorage.getItem("modal")){
   //console.log("You were already here");
   modal.style.display="none";
-  }else{
+}else{
   //console.log("Oh. A new guest...");
-    modal.style.display="block";
+  modal.style.display="block";
   localStorage.setItem("modal",true);
 }
 
@@ -42,27 +44,39 @@ var span = document.querySelector('.close');
 
 var sources = document.getElementById('sources');
 var bkground = document.querySelector('.overlay');
+
 sources.addEventListener('click', function(){
   modalSources.style.display="block";
+  $('#modalSources').addClass('animated fadeInUp');
   bkground.style.display="block";
-<<<<<<< HEAD
-=======
 });
 
-var close = document.querySelector('#close');
-close.addEventListener('click', function(){
-  modalSources.style.display="none";
-  bkground.style.display="none";
->>>>>>> a253a35a509b444678f1111cc00960b24f1872e0
-});
 
 var close = document.querySelector('#close');
 close.addEventListener('click', function(){
   modalSources.style.display="none";
   bkground.style.display="none";
 });
+
+
 
 //change color of squares
 
+function randColor(){
 
-//$('.outer-square').animate({backgroundColor:'red'})
+
+  var color; // hexadecimal starting symbol
+  var letters = ['f44336','9c27b0','3f51b5','00bcd4','2196f3','ffeb3b','9e9e9e','062a40', '4caf50', 'cc1ac5']; //Set your colors here
+
+  var squares = document.getElementsByClassName("outer-square");
+
+  for(var i=0; i < squares.length; i++)
+  {
+    color ="#";
+    color += letters[Math.floor(Math.random() * letters.length)];
+    squares[i].style.backgroundColor = color;
+  }
+
+}
+
+setInterval(randColor, 6000);
