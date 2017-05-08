@@ -124,94 +124,6 @@ $(document).ready(function(){
 function init() {
 
 
-/*  var jsonData = [
-    {
-    "name": "Patricia Bath",
-    "photo": "css/images/bath.jpg",
-    "bio":["Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi dictum mi erat, et dictum metus dictum sed",
-           "Nam vitae congue diam. Nam sodales luctus quam, sed pellentesque nibh pulvinar non. Nunc nec rhoncus tortor.",
-           "Suspendisse potenti. Sed quis molestie dui. Aenean non faucibus sapien. Maecenas ex metus, tincidunt sed risus",
-            "elementum, elementum varius orci. Sed tempor nunc id sem feugiat ultricies. Nam posuere ligula",
-           "vitae libero facilisis convallis. Nulla facilisi."
-         ],
-
-    "date": "1981",
-    "invention-photo": "css/images/laserphaco.jpg"
-  },
-
-  {
-  "name": "Flossie Wong",
-  "photo": "css/images/flossiewong.jpg",
-  "bio":["Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi dictum mi erat, et dictum metus dictum sed",
-         "Nam vitae congue diam. Nam sodales luctus quam, sed pellentesque nibh pulvinar non. Nunc nec rhoncus tortor.",
-         "Suspendisse potenti. Sed quis molestie dui. Aenean non faucibus sapien. Maecenas ex metus, tincidunt sed risus",
-          "elementum, elementum varius orci. Sed tempor nunc id sem feugiat ultricies. Nam posuere ligula",
-         "vitae libero facilisis convallis. Nulla facilisi."
-       ],
-
-  "date": "1983",
-  "invention-photo": "css/images/HIVvirus.png"
-  },
-
-  {
-  "name": "Garrett Morgan",
-  "photo": "css/images/garrettmorgan.jpg",
-  "bio":["Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi dictum mi erat, et dictum metus dictum sed",
-         "Nam vitae congue diam. Nam sodales luctus quam, sed pellentesque nibh pulvinar non. Nunc nec rhoncus tortor.",
-         "Suspendisse potenti. Sed quis molestie dui. Aenean non faucibus sapien. Maecenas ex metus, tincidunt sed risus",
-          "elementum, elementum varius orci. Sed tempor nunc id sem feugiat ultricies. Nam posuere ligula",
-         "vitae libero facilisis convallis. Nulla facilisi."
-       ],
-
-  "date": "1923",
-  "invention-photo": "css/images/trafficlight.png"
-  },
-
-  {
-  "name": "Ellen Ochoa",
-  "photo": "css/images/ellenochoa.jpg",
-  "bio":["Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi dictum mi erat, et dictum metus dictum sed",
-         "Nam vitae congue diam. Nam sodales luctus quam, sed pellentesque nibh pulvinar non. Nunc nec rhoncus tortor.",
-         "Suspendisse potenti. Sed quis molestie dui. Aenean non faucibus sapien. Maecenas ex metus, tincidunt sed risus",
-          "elementum, elementum varius orci. Sed tempor nunc id sem feugiat ultricies. Nam posuere ligula",
-         "vitae libero facilisis convallis. Nulla facilisi."
-       ],
-
-  "date": "1993",
-  "invention-photo": "css/images/astronaut.png"
-  },
-
-  {
-  "name": "Ajay Bhatt",
-  "photo": "css/images/bhatt.jpg",
-  "bio":["Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi dictum mi erat, et dictum metus dictum sed",
-         "Nam vitae congue diam. Nam sodales luctus quam, sed pellentesque nibh pulvinar non. Nunc nec rhoncus tortor.",
-         "Suspendisse potenti. Sed quis molestie dui. Aenean non faucibus sapien. Maecenas ex metus, tincidunt sed risus",
-          "elementum, elementum varius orci. Sed tempor nunc id sem feugiat ultricies. Nam posuere ligula",
-         "vitae libero facilisis convallis. Nulla facilisi."
-       ],
-
-  "date": "1994",
-  "invention-photo": "css/images/usb.png"
-  },
-
-  {
-  "name": "An Wang",
-  "photo": "css/images/anwang.jpg",
-  "bio":["Lorem ipsum dolor sit amet, consectetur adipiscing elit Morbi dictum mi erat, et dictum metus dictum sed",
-         "Nam vitae congue diam. Nam sodales luctus quam, sed pellentesque nibh pulvinar non. Nunc nec rhoncus tortor.",
-         "Suspendisse potenti. Sed quis molestie dui. Aenean non faucibus sapien. Maecenas ex metus, tincidunt sed risus",
-          "elementum, elementum varius orci. Sed tempor nunc id sem feugiat ultricies. Nam posuere ligula",
-         "vitae libero facilisis convallis. Nulla facilisi."
-       ],
-
-  "date": "1994",
-  "invention-photo": "css/images/wang220.png"
-  }
-
-]*/
-
-
   var source = $("#inventorRowTemplate").html();
   var template = Handlebars.compile(source);
   var inventorScreen = document.querySelector('.inventor-screen');
@@ -225,9 +137,7 @@ function init() {
             var source = $("#inventorTemplate").html();
             var template = Handlebars.compile(source);
             $(".inventor-screen").html(template(jsonData[index]));
-            //$('.inventor-screen').css('background-image', 'url(' + jsonData[index].inventor_image + ')');
             $('.inventor-screen').css('z-index', '10000');
-
             $('.home-screen').addClass('animated fadeOut');
             $('#info').css('color', 'white');
           });
@@ -260,8 +170,7 @@ function init() {
 
 $.ajax({
                dataType: 'json',
-               //url: "http://localhost:8888/inventorCrud/getinventors.php",
-               url: "http://localhost:8888/inventorCrud/getinventors.php",
+               url: "http://candaceworthen.com/inventorcrud/getinventors.php",
                data:{jsonData: jsonData},
                error: function(XMLHttpRequest, textStatus, errorThrown) {
                 alert(errorThrown);
@@ -283,7 +192,6 @@ $.ajax({
 <script id="inventorRowTemplate" type="text/x-handlebars-template">
   {{#each objects}}
   <li>
-  <!--img class=inventors src="css/images/patriciabath.png"-->
   <div class="outer-square">
 <div class="squares" data-index="{{@index}}">
   <img class="inventions" src="{{invention_image}}">

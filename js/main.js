@@ -45,6 +45,15 @@ var bkground = document.querySelector('.overlay');
 sources.addEventListener('click', function(){
   modalSources.style.display="block";
   bkground.style.display="block";
+<<<<<<< HEAD
+=======
+});
+
+var close = document.querySelector('#close');
+close.addEventListener('click', function(){
+  modalSources.style.display="none";
+  bkground.style.display="none";
+>>>>>>> a253a35a509b444678f1111cc00960b24f1872e0
 });
 
 var close = document.querySelector('#close');
