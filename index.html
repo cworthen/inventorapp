@@ -21,6 +21,7 @@
 
 
 <body>
+
   <div class="intro">
     <h1>Inventor App</h1>
     <h3>please select to continue</h3>
@@ -129,7 +130,9 @@
         var source = $("#inventorRowTemplate").html();
         var template = Handlebars.compile(source);
         var inventorScreen = document.querySelector('.inventor-screen');
-        $(".inventory-slide").html(template({objects:jsonData}) );
+        $(".inventory-slide").html(template({objects:jsonData}));
+
+
 
 
         $('.squares').click(function(){
@@ -137,9 +140,12 @@
           var source = $("#inventorTemplate").html();
           var template = Handlebars.compile(source);
           $(".inventor-screen").html(template(jsonData[index]));
-          $('.inventor-screen').css('z-index', '10000');
+          //$('.inventor-screen').css('z-index', '1000');
           $(".intro").css('display','none');
+          $('.home-screen').removeClass('animated fadeIn');
           $('.home-screen').addClass('animated fadeOut');
+          $('.home-screen').css('display', 'none');
+          $('.inventor-screen').css('display', 'block');
           $('#info').css('color', 'white');
           $("#info,.home-icon").css({
             position:'absolute',
@@ -149,7 +155,10 @@
             position:'absolute',
             top:'18px'
           });
+
         });
+        //slideIndex = $(this).index();
+    //  $( 'ul.inventory-slide' ).slickGoTo( parseInt(slideIndex) );
 
 
 
@@ -171,8 +180,10 @@
               }
             }
           ]
-        });
-      }
+      });
+    }
+
+
 
 
       var jsonData;
@@ -190,8 +201,8 @@
         }
 
       });
+  });
 
-    });
     </script>
 
 
@@ -212,7 +223,7 @@
 
     <script id="inventorTemplate" type="text/x-handlebars-template">
       <div class="inventor-screen">
-        <img class="inventor-screen" src="{{inventor_image}}">
+        <img class="inventor-image" src="{{inventor_image}}">
         <div class="inventor-info">
           <div class="info-date">
             <p>{{year}}</p>

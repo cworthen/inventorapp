@@ -1,15 +1,35 @@
 
+//setting inventor screen 0 is not working as expected
+//the heading or intro won't return
+//jquery won't add display none to inventor screen and it shows
+// behind home screen
+// changed the position of the icons
+
+
+
+
+
 $(document).ready(function(){
 
   $('.home-icon').click(function(){
 
-    if(!$(this).hasClass('faded')) {
-      location.reload();
-    }
+  //if(!$(this).hasClass('faded')){
 
-  });
+$('.home-screen').removeClass('animated  fadeOut');
+$('.home-screen').addClass('animated fadeIn');
+$('.inventor-screen').css('display','none');
+$('.home-screen').css('display', 'block');
+$(".intro").css('display','block');
+
+
+//}
 
 });
+});
+
+
+
+    // location.reload();
 
 //welcome screen pop-up
 

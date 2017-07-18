@@ -182,12 +182,21 @@ footer a{
 }
 
 .inventor-screen{
+  width:1024px;
+  height:768px;
+  z-index:0;
+  position: absolute;
+}
+
+.inventor-image{
   background-size: cover;
   width:1024px;
   height:768px;
   position: absolute;
   top: -14px;
   left: 0;
+
+
 }
 
 .home-screen{
@@ -388,7 +397,7 @@ footer p{
 
 /*** Media Queries ***/
 
-@media (min-width:768px) and (max-width: 1024px){
+/*@media (min-width:768px) and (max-width: 1024px){
 
   .home-screen, .inventor-screen{
     width:100%;
@@ -407,4 +416,4 @@ footer p{
 
   }
 
-}
+}*/
